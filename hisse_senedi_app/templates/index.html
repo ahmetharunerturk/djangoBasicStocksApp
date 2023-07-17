@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hisse Senetleri</title>
+</head>
+<body>
+    <h1>Hisse Senedi Listesi</h1>
+    <ul>
+        {% for hisse in hisse_listesi %}
+            <li>{{ hisse.symbol }} - {% if hisse.price %}{{ hisse.price }}{% else %}Veri Yok{% endif %}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
