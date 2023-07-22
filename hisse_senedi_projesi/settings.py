@@ -15,7 +15,7 @@ from django.core.management.utils import get_random_secret_key
 
 import os
 import sys
-import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -74,6 +74,8 @@ TEMPLATES = [
 ]
 
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
+
+import dj_database_url
 
 if DEVELOPMENT_MODE is True:
     DATABASES = {
